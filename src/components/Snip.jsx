@@ -4,21 +4,21 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { useNostr } from "../context/NostrProvider";
 import { useAtom } from "react-atomize-store";
+import { useNavigate } from "react-router-dom";
 
 const Snip = ({ events }) => {
   const [keypair] = useAtom("keypair");
+  const navigate = useNavigate();
   const { publish } = useNostr();
 
   const onDeleteSnip = (id) => {
-    // console.log("delete", id);
-
     sendSignEvent({
       kind: 5,
       content: "deleted",
       tags: [["e", id]],
       keypair,
       publish,
-    }).then(() => console.log("deleted"));
+    }).then(() => navigate("/"));
   };
 
   return (
