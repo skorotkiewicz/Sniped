@@ -40,7 +40,10 @@ const Sniped = () => {
           {event.length > 0 ? (
             <>
               <Snip events={event} />
-              <AddComment keypair={keypair} postId={id} />
+
+              {keypair && keypair.pk && (
+                <AddComment keypair={keypair} postId={id} />
+              )}
 
               {isLoadingComments ? (
                 <Loading />
