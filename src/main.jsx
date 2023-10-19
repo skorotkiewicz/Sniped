@@ -14,7 +14,10 @@ const relayUrls = [
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <NostrProvider relayUrls={relayUrls} debug={true}>
+    <NostrProvider
+      relayUrls={relayUrls}
+      debug={import.meta.env.DEV ? true : false}
+    >
       <BrowserRouter>
         <App />
       </BrowserRouter>

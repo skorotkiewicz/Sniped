@@ -10,7 +10,7 @@ const Snip = ({ events }) => {
   const { publish } = useNostr();
 
   const onDeleteSnip = (id) => {
-    console.log("delete", id);
+    // console.log("delete", id);
 
     sendSignEvent({
       kind: 5,
