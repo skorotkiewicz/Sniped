@@ -50,6 +50,8 @@ const Snip = ({ events }) => {
                 {shortPubKey(data.pubkey, 7)}
               </Link>
             </p>
+
+            <Link to={`/lang/${s.mode}`}>#{s.mode}</Link>
           </div>
         );
       })}

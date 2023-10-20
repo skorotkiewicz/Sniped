@@ -16,6 +16,7 @@ import { getLoginKeys } from "./utils";
 import { useNostr } from "./context/NostrProvider";
 import Sniped from "./pages/Sniped";
 import { Loading } from "./components/Loading";
+import SnipByTag from "./pages/SnipByTag";
 
 export default function App() {
   const [keypair, setKeypair] = useAtom("keypair");
@@ -41,6 +42,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path="lang/:lang" element={<SnipByTag />} />
         <Route path="about" element={<About />} />
         <Route path="profile?/:id" element={<Profile />} />
         <Route path="snip?/:id" element={<Sniped />} />
