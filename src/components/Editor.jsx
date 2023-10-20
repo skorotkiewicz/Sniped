@@ -33,7 +33,11 @@ const Editor = () => {
     sendSignEvent({
       kind: 1,
       keypair,
-      tags: [["t", TOPIC]],
+      // tags: [["t", TOPIC]],
+      tags: [
+        ["t", TOPIC],
+        ["l", mode],
+      ],
       content: JSON.stringify({ snip, mode, fileName }),
       publish,
     }).then(() => {

@@ -81,7 +81,7 @@ const CommentComp = ({
 
   return (
     <>
-      <div className="comment">
+      <div className="comment-form-users">
         <div className="header">
           <span
             onClick={() => setShowFullPubkey((prev) => !prev)}
