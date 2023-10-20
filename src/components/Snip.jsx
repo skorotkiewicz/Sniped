@@ -37,7 +37,12 @@ const Snip = ({ events }) => {
               <span>{dateFormatter(data.created_at)}</span>
             </p>
 
-            <SyntaxHighlighter language={s.mode} style={dracula}>
+            <SyntaxHighlighter
+              language={s.mode}
+              style={dracula}
+              showLineNumbers={true}
+              wrapLines={true}
+            >
               {s.snip}
             </SyntaxHighlighter>
 

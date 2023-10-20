@@ -1,4 +1,4 @@
-.comment {
+.comment-form-users {
   background-color: #2f2f2f;
 }
 
@@ -155,18 +155,18 @@ button {
   right: 0.1em;
 }
 
-.comment {
+.comment-form-users {
   padding: 0.5rem;
   border: 1px solid #6f6f6f;
   border-radius: 0.5rem;
 }
 
-.comment a {
+.comment-form-users a {
   color: #727272;
   text-decoration: none;
 }
 
-.comment .header {
+.comment-form-users .header {
   color: #dcdcdc;
   display: flex;
   justify-content: space-between;
@@ -174,11 +174,11 @@ button {
   font-size: 0.75em;
 }
 
-.comment .header .name {
+.comment-form-users .header .name {
   font-weight: bold;
 }
 
-.comment .message {
+.comment-form-users .message {
   white-space: pre-wrap;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -188,7 +188,7 @@ button {
   color: #727272;
 } */
 
-.comment .footer,
+.comment-form-users .footer,
 .footer-entries {
   display: flex;
   gap: 0.5rem;
